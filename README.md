@@ -4,7 +4,7 @@ This is a simple personal portfolio website for Kae Davis, built with HTML and C
 
 ## Live Preview
 
-(Include a link here if hosted on GitHub Pages, Netlify, etc.)
+https://kdavis00.github.io/GCA_KaeD/
 
 
 ## Features
