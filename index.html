@@ -1,68 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Kae Davis</title>
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Devicon CSS -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-  </head>
-  <body>
-    <!-- Header / Hero -->
-    <header>
-       <div class="coin-container">
-    <div class="coin">
-      <img src="Kae_img.jpeg" alt="Kae Davis" class="front" />
-      <img src="K1_cool.png" alt="Kae Davis alternate" class="back" />
+  <title>Kae Davis</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Devicon CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+  <!-- Header / Hero -->
+  <header>
+    <div class="coin-container">
+      <div class="coin">
+        <img src="Kae_img.jpeg" alt="Kae Davis" class="front" />
+        <img src="K1_cool.jpeg" alt="Kae Davis alternate" class="back" />
+      </div>
     </div>
-  </div>
-      <h1>Kae Davis</h1>
-      <p>Aspiring web developer</p>
-      <div class="social-links">
-    <a href="https://www.linkedin.com/in/kae-davis-551915139/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-      <i class="devicon-linkedin-plain-wordmark"></i>
-    </a>
-    <a href="https://github.com/KDavis00" target="_blank" rel="noopener noreferrer" >
-      <i class="devicon-github-original-wordmark"></i>
-    </a>
-  </div>
-    </header>
+    <h1>Kae Davis</h1>
+    <p>Aspiring web developer</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/kae-davis-551915139/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="devicon-linkedin-plain-wordmark"></i>
+      </a>
+      <a href="https://github.com/KDavis00" target="_blank" rel="noopener noreferrer">
+        <i class="devicon-github-original-wordmark"></i>
+      </a>
+    </div>
+  </header>
 
-    <!-- Mission Section -->
-    <section class="section">
-      <img src="cat-breakdance.gif" alt="Cat Breakdancing" class="gif-small" />
-      <div class="text">
-        <h2>Mission</h2>
-        <p>
-          I'm still discovering my mission, but I’m passionate about exploring
-          the world of technology and eager to learn, grow, and create
-          meaningful impact along the way.
-        </p>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills">
-      <h2>Skills</h2>
+  <!-- Mission Section -->
+  <section class="section">
+    <img src="cat-breakdance.gif" alt="Cat Breakdancing" class="gif-small" />
+    <div class="text">
+      <h2>Mission</h2>
       <p>
-        Here are a few of my skills I've learned through school and
-        self-teaching:
+        I'm still discovering my mission, but I’m passionate about exploring
+        the world of technology and eager to learn, grow, and create
+        meaningful impact along the way.
       </p>
-      <div class="badges">
-        <span class="badge"
-          ><i class="devicon-javascript-plain"></i> JavaScript</span
-        >
-        <span class="badge"><i class="devicon-html5-plain"></i> HTML</span>
-        <span class="badge"><i class="devicon-css3-plain"></i> CSS</span>
-        <span class="badge"><i class="devicon-python-plain"></i> Python</span>
-        <span class="badge"><i class="devicon-react-plain"></i> React</span>
-        <span class="badge"><i class="devicon-vite-plain"></i> Vite</span>
-      </div>
-    </section>
-  </body>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <p>
+      Here are a few of my skills I've learned through school and self-teaching:
+    </p>
+    <div class="badges">
+      <span class="badge"><i class="devicon-javascript-plain"></i> JavaScript</span>
+      <span class="badge"><i class="devicon-html5-plain"></i> HTML</span>
+      <span class="badge"><i class="devicon-css3-plain"></i> CSS</span>
+      <span class="badge"><i class="devicon-python-plain"></i> Python</span>
+      <span class="badge"><i class="devicon-react-plain"></i> React</span>
+      <span class="badge"><i class="devicon-vite-plain"></i> Vite</span>
+    </div>
+  </section>
+
+  <!-- Mobile Device Detection Button -->
+  <button id="deviceInfoButton" class="device-btn" onclick="detectDevice()">📱 Check Device</button>
+  <div id="device-info"></div>
+
+  <!-- JS -->
+  <script src="device.js"></script>
+</body>
 </html>

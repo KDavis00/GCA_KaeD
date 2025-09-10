@@ -31,10 +31,11 @@ header p {
   font-size: 1.2em;
   font-weight: 300;
 }
+
 .coin-container {
   width: 140px;
   height: 140px;
-  perspective: 1000px; /* enables 3D depth */
+  perspective: 1000px;
   margin: 0 auto 20px;
 }
 
@@ -55,7 +56,7 @@ header p {
   position: absolute;
   top: 0;
   left: 0;
-  backface-visibility: hidden; /* hides the back until flipped */
+  backface-visibility: hidden;
 }
 
 .coin img.back {
@@ -65,7 +66,6 @@ header p {
 .coin-container:hover .coin {
   transform: rotateY(180deg);
 }
-
 
 .social-links {
   display: flex;
@@ -78,7 +78,7 @@ header p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;   /* ensures uniform box */
+  width: 60px;
   height: 60px;
   text-decoration: none;
 }
@@ -95,11 +95,12 @@ header p {
   transform: scale(1.2);
   color: #0a66c2;
 }
+
 .devicon-linkedin-plain-wordmark {
   position: relative;
-  top: 19px; 
-
+  top: 19px;
 }
+
 .section {
   display: flex;
   flex-wrap: wrap;
@@ -159,19 +160,62 @@ header p {
 }
 
 .badge:hover {
-  transform: scale(1.1);                   /* slightly grow */
-  background-color: #3a7a02;               /* slightly brighter green */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* add subtle shadow */
-  cursor: pointer;                         /* indicate it’s interactive */
+  transform: scale(1.1);
+  background-color: #3a7a02;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
 }
 
+/* Device Button */
+.device-btn {
+  display: none; /* hidden by default */
+  
+}
 
+.device-btn:hover {
+  transform: translateY(-2px);
+  background-color: #3a7a02;
+}
+
+#device-info {
+  display: none;
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  background-color: #2a5e01;
+  color: #f4ede1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  white-space: pre-line;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  max-width: 200px;
+}
+
+/* Mobile Only */
 @media (max-width: 768px) {
+  .device-btn {
+    display: block;
+    position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #2a5e01;
+  color: #f4ede1;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  }
   .section {
     flex-direction: column;
     text-align: center;
   }
-
   .section .text {
     margin: 20px 0;
   }
