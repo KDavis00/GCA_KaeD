@@ -31,7 +31,75 @@ header p {
   font-size: 1.2em;
   font-weight: 300;
 }
+.coin-container {
+  width: 140px;
+  height: 140px;
+  perspective: 1000px; /* enables 3D depth */
+  margin: 0 auto 20px;
+}
 
+.coin {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.coin img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #f4ede1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden; /* hides the back until flipped */
+}
+
+.coin img.back {
+  transform: rotateY(180deg);
+}
+
+.coin-container:hover .coin {
+  transform: rotateY(180deg);
+}
+
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;   /* ensures uniform box */
+  height: 60px;
+  text-decoration: none;
+}
+
+.social-links i {
+  font-size: 3rem;
+  color: white;
+  line-height: 1;
+  display: block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-links i:hover {
+  transform: scale(1.2);
+  color: #0a66c2;
+}
+.devicon-linkedin-plain-wordmark {
+  position: relative;
+  top: 19px; 
+
+}
 .section {
   display: flex;
   flex-wrap: wrap;
@@ -87,7 +155,16 @@ header p {
   border-radius: 6px;
   font-size: 0.95em;
   display: inline-block;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+.badge:hover {
+  transform: scale(1.1);                   /* slightly grow */
+  background-color: #3a7a02;               /* slightly brighter green */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* add subtle shadow */
+  cursor: pointer;                         /* indicate it’s interactive */
+}
+
 
 @media (max-width: 768px) {
   .section {
