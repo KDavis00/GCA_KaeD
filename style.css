@@ -100,7 +100,7 @@ header p {
   transform: scale(1.2);
   color: #0a66c2;
 }
-
+.devicon-linkedin-plain-wordmark { position: relative; top: 19px; }
 /* Sticky Navbar */
 .navbar {
   position: sticky;
