@@ -100,6 +100,36 @@ header p {
   position: relative;
   top: 19px;
 }
+/* Sticky Navbar */
+.navbar {
+  position: sticky;   /* sticks to top */
+  top: 0;             /* position at top */
+  width: 100%;
+  background-color: rgba(37, 82, 3, 0.95); /* slightly transparent green */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  gap: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #f4ede1;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #3a7a02; /* highlight color on hover */
+}
 
 .section {
   display: flex;
@@ -124,6 +154,56 @@ header p {
   font-size: 2em;
   margin-bottom: 10px;
   color: black;
+   text-align: center;
+}
+.projects {
+  background-color: #e3d2b5;
+  
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.projects h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #2a5e01;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  color: #3a7a02;
 }
 
 .skills {
