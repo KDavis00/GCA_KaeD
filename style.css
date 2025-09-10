@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -5,6 +6,11 @@ body {
   color: #333;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* Header */
 header {
   background: url("leaves.jpg") no-repeat center center/cover;
   padding: 80px 20px 60px;
@@ -32,6 +38,7 @@ header p {
   font-weight: 300;
 }
 
+/* Coin Flip */
 .coin-container {
   width: 140px;
   height: 140px;
@@ -67,6 +74,7 @@ header p {
   transform: rotateY(180deg);
 }
 
+/* Social Links */
 .social-links {
   display: flex;
   justify-content: center;
@@ -78,16 +86,13 @@ header p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
-  text-decoration: none;
+  width: 80px;
+  height: 80px;
 }
 
 .social-links i {
   font-size: 3rem;
   color: white;
-  line-height: 1;
-  display: block;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
@@ -96,16 +101,12 @@ header p {
   color: #0a66c2;
 }
 
-.devicon-linkedin-plain-wordmark {
-  position: relative;
-  top: 19px;
-}
 /* Sticky Navbar */
 .navbar {
-  position: sticky;   /* sticks to top */
-  top: 0;             /* position at top */
+  position: sticky;
+  top: 0;
   width: 100%;
-  background-color: rgba(37, 82, 3, 0.95); /* slightly transparent green */
+  background-color: rgba(37, 82, 3, 0.95);
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   z-index: 999;
 }
@@ -120,7 +121,6 @@ header p {
 }
 
 .navbar a {
-  text-decoration: none;
   color: #f4ede1;
   font-weight: bold;
   font-size: 1.1em;
@@ -128,9 +128,10 @@ header p {
 }
 
 .navbar a:hover {
-  color: #3a7a02; /* highlight color on hover */
+  color: #3a7a02;
 }
 
+/* Sections */
 .section {
   display: flex;
   flex-wrap: wrap;
@@ -138,11 +139,6 @@ header p {
   justify-content: center;
   padding: 60px 20px;
   background-color: #e3d2b5;
-}
-
-.gif-small {
-  width: 150px;
-  height: auto;
 }
 
 .section .text {
@@ -154,18 +150,29 @@ header p {
   font-size: 2em;
   margin-bottom: 10px;
   color: black;
-   text-align: center;
-}
-.projects {
-  background-color: #e3d2b5;
-  
   text-align: center;
-  padding: 60px 20px;
 }
 
-.projects h2 {
+/* Mission Section Gif */
+.gif-small {
+  width: 150px;
+  height: auto;
+}
+
+/* Projects Section */
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #e3d2b5;
+}
+
+#projects h2 {
   font-size: 2em;
   margin-bottom: 30px;
+  color: black;
 }
 
 .project-cards {
@@ -197,7 +204,6 @@ header p {
 .project-card a {
   display: inline-block;
   margin-top: 10px;
-  text-decoration: none;
   color: #2a5e01;
   font-weight: bold;
 }
@@ -206,6 +212,7 @@ header p {
   color: #3a7a02;
 }
 
+/* Skills Section */
 .skills {
   background-color: #255203;
   color: #f4ede1;
@@ -246,10 +253,9 @@ header p {
   cursor: pointer;
 }
 
-/* Device Button */
+/* Mobile Device Button */
 .device-btn {
-  display: none; /* hidden by default */
-  
+  display: none;
 }
 
 .device-btn:hover {
@@ -273,30 +279,37 @@ header p {
   max-width: 200px;
 }
 
-/* Mobile Only */
+/* Responsive */
 @media (max-width: 768px) {
   .device-btn {
     display: block;
     position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background-color: #2a5e01;
-  color: #f4ede1;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  z-index: 1000;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+    bottom: 80px;
+    right: 20px;
+    background-color: #2a5e01;
+    color: #f4ede1;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.2s ease, background-color 0.2s ease;
   }
+
   .section {
     flex-direction: column;
     text-align: center;
   }
+
   .section .text {
     margin: 20px 0;
+  }
+
+  .project-cards {
+    flex-direction: column;
+    gap: 20px;
   }
 }
