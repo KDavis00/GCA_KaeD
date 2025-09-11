@@ -6,6 +6,7 @@ body {
   color: #333;
 }
 
+
 a {
   text-decoration: none;
 }
@@ -91,20 +92,21 @@ header p {
 }
 
 .social-links i {
-  font-size: 3rem;
+  font-size: 4rem;
   color: white;
   transition: transform 0.2s ease, color 0.2s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 9);  /* Adding a subtle shadow effect */
 }
 
 .social-links i:hover {
   transform: scale(1.2);
-  color: #0a66c2;
+  color: #ebe485;
 }
-.devicon-linkedin-plain-wordmark {
-  font-size: 4rem;        /* make it bigger */
-  line-height: 1;         /* remove extra spacing */
+
+.social-links .devicon-linkedin-plain-wordmark {
+  font-size: 5rem !important;  /* Making the LinkedIn icon bigger with !important to override any other styles */
   position: relative;
-  top: 0;                 /* reset the push-up */
+  top: 24px;                 /* reset the push-up */
 }
 .navbar {
   position: sticky;
@@ -157,8 +159,8 @@ header p {
   text-align: center;
 }
 
-/* Mission Section Gif */
-#mission .text {
+/* about Section Gif */
+#about .text {
   display: flex;
   flex-direction: column;  /* stack elements vertically */
   align-items: center;     /* center heading, gif, and paragraph */
@@ -173,7 +175,7 @@ header p {
   margin: 20px 0;          /* space around the GIF */
 }
 
-#mission .gif-small {
+#about .gif-small {
   display: block;
   width: 150px;
   height: auto;
