@@ -100,8 +100,12 @@ header p {
   transform: scale(1.2);
   color: #0a66c2;
 }
-.devicon-linkedin-plain-wordmark { position: relative; top: 19px; }
-/* Sticky Navbar */
+.devicon-linkedin-plain-wordmark {
+  font-size: 4rem;        /* make it bigger */
+  line-height: 1;         /* remove extra spacing */
+  position: relative;
+  top: 0;                 /* reset the push-up */
+}
 .navbar {
   position: sticky;
   top: 0;
