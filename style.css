@@ -306,7 +306,7 @@ header p {
   .device-btn {
     display: block;
     position: fixed;
-    bottom: 80px;
+    bottom: 10px;
     right: 20px;
     background-color: #2a5e01;
     color: #f4ede1;
