@@ -9,9 +9,6 @@
 
   <!-- Devicon CSS -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  
-  <!-- Add Font Awesome for music icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <!-- Header / Hero -->
@@ -33,21 +30,20 @@
       </a>
     </div>
   </header>
-  <!-- Sticky Navbar -->
-<nav class="navbar">
-  <ul>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#spotify">My Music</a></li>
-  </ul>
-</nav>
 
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+  </nav>
 
   <!-- Mission Section -->
   <section class="section" id="about">
     <div class="gif-wrapper">
-    <img src="cat-breakdance.gif" alt="Cat Breakdancing" class="gif-small" />
+      <img src="cat-breakdance.gif" alt="Cat Breakdancing" class="gif-small" />
     </div>
     <div class="text">
       <h2>About Me</h2>
@@ -56,30 +52,30 @@
        
         On the side, I'm also a part-time Twitch streamer, where I share creative projects, build computers, have chill dev sessions, and the occasional game stream.
       </p>
-     
     </div>
   </section>
-<!-- Projects Section -->
-<section class="section projects" id="projects">
-  <h2>Projects</h2>
-  <div class="project-cards">
-    <div class="project-card">
-      <h3>Snake Game</h3>
-      <p>Combining my love for retro games with web development, I recreated the classic Snake game using HTML, CSS, and JavaScript.</p>
-      <a href="https://kdavis00.github.io/Snake/" target="_blank">View Project</a>
+
+  <!-- Projects Section -->
+  <section class="section projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <h3>Snake Game</h3>
+        <p>Combining my love for retro games with web development, I recreated the classic Snake game using HTML, CSS, and JavaScript.</p>
+        <a href="https://kdavis00.github.io/Snake/" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Magic 8 Ball</h3>
+        <p>I've recreated the classic Magic 8 Ball using HTML, CSS, and JavaScript. Ask it any question and let fate decide your destiny!</p>
+        <a href="https://kdavis00.github.io/Magic-8Ball/" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Pong</h3>
+        <p>Pong Game: A simple yet addictive Pong game built with HTML, CSS, and JavaScript. Play against the computer.</p>
+        <a href="https://kdavis00.github.io/pong/" target="_blank">View Project</a>
+      </div>
     </div>
-    <div class="project-card">
-      <h3>Magic 8 Ball</h3>
-      <p>I’ve recreated the classic Magic 8 Ball using HTML, CSS, and JavaScript. Ask it any question and let fate decide your destiny!</p>
-      <a href="https://kdavis00.github.io/Magic-8Ball/" target="_blank">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Pong</h3>
-      <p>Pong Game: A simple yet addictive Pong game built with HTML, CSS, and JavaScript. Play against the computer.</p>
-      <a href="https://kdavis00.github.io/pong/" target="_blank">View Project</a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Skills Section -->
   <section class="skills" id="skills">
@@ -97,40 +93,11 @@
     </div>
   </section>
 
-  <!-- Spotify Section -->
-  <section class="spotify-section" id="spotify">
-    <h2>My Music</h2>
-    <div class="spotify-container">
-      <div class="now-playing">
-        <h3>Now Playing</h3>
-        <div id="current-track">
-          <div class="track-info">
-            <img id="track-artwork" src="" alt="Album artwork" class="hidden">
-            <div class="track-details">
-              <p id="track-name">Not playing</p>
-              <p id="track-artist"></p>
-            </div>
-          </div>
-          <div class="progress-bar">
-            <div id="progress"></div>
-          </div>
-        </div>
-      </div>
-      <div class="recently-played">
-        <h3>Recently Played</h3>
-        <div id="recent-tracks">
-          <!-- Recent tracks will be populated by JavaScript -->
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Mobile Device Detection Button -->
   <button id="deviceInfoButton" class="device-btn" onclick="detectDevice()">📱 Check Device</button>
   <div id="device-info"></div>
 
   <!-- JS -->
-  <script src="spotify.js"></script>
   <script src="device.js"></script>
 </body>
 </html>
