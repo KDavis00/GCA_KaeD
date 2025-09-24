@@ -13,11 +13,20 @@ let refreshToken = null;
 // Initialize Spotify integration
 async function initializeSpotify() {
     try {
+        console.log('Attempting to initialize Spotify...'); // Debug log
+        console.log('Using API URL:', API_URL); // Debug log
         const response = await fetch(`${API_URL}/spotify/login`);
+        console.log('Login response status:', response.status); // Debug log
         const data = await response.json();
+        console.log('Login response data:', data); // Debug log
         window.location.href = data.url;
     } catch (error) {
         console.error('Error initializing Spotify:', error);
+        console.error('Full error details:', {
+            message: error.message,
+            stack: error.stack,
+            response: error.response
+        });
     }
 }
 

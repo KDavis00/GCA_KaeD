@@ -21,7 +21,7 @@ app.use(limiter);
 // CORS configuration
 app.use(cors({
     origin: process.env.NODE_ENV === 'production'
-        ? 'https://kdavis00.github.io'
+        ? 'https://kdavis00.github.io/GCA_KaeD'
         : process.env.FRONTEND_URL,
     credentials: true
 }));
@@ -46,6 +46,15 @@ const SPOTIFY_RECENTLY_PLAYED_URL = 'https://api.spotify.com/v1/me/player/recent
 // Health check endpoint for Render
 app.get('/', (req, res) => {
     res.json({ status: 'Server is running' });
+});
+
+// Test endpoint
+app.get('/test', (req, res) => {
+    res.json({ 
+        status: 'API is working',
+        time: new Date().toISOString(),
+        env: process.env.NODE_ENV
+    });
 });
 
 // Spotify authentication endpoint
