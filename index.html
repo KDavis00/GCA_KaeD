@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kae Davis</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Devicon CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  
+  <!-- Add Font Awesome for music icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header / Hero -->
+  <header>
+    <div class="coin-container">
+      <div class="coin">
+        <img src="Kae_img.jpeg" alt="Kae Davis" class="front" />
+        <img src="K1_cool.png" alt="Kae Davis alternate" class="back" />
+      </div>
+    </div>
+    <h1>Kae Davis</h1>
+    <p>Aspiring web developer</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/kae-davis-551915139/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="devicon-linkedin-plain-wordmark"></i>
+      </a>
+      <a href="https://github.com/KDavis00" target="_blank" rel="noopener noreferrer">
+        <i class="devicon-github-original-wordmark"></i>
+      </a>
+    </div>
+  </header>
+  <!-- Sticky Navbar -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#spotify">My Music</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Mission Section -->
+  <section class="section" id="about">
+    <div class="gif-wrapper">
+    <img src="cat-breakdance.gif" alt="Cat Breakdancing" class="gif-small" />
+    </div>
+    <div class="text">
+      <h2>About Me</h2>
+      <p>
+        Right now, I'm experimenting with HTML, CSS, JavaScript, and React and exploring new tools and figuring out how to bring creative ideas to life on the web.
+       
+        On the side, I'm also a part-time Twitch streamer, where I share creative projects, build computers, have chill dev sessions, and the occasional game stream.
+      </p>
+     
+    </div>
+  </section>
+<!-- Projects Section -->
+<section class="section projects" id="projects">
+  <h2>Projects</h2>
+  <div class="project-cards">
+    <div class="project-card">
+      <h3>Snake Game</h3>
+      <p>Combining my love for retro games with web development, I recreated the classic Snake game using HTML, CSS, and JavaScript.</p>
+      <a href="https://kdavis00.github.io/Snake/" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Magic 8 Ball</h3>
+      <p>I’ve recreated the classic Magic 8 Ball using HTML, CSS, and JavaScript. Ask it any question and let fate decide your destiny!</p>
+      <a href="https://kdavis00.github.io/Magic-8Ball/" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Pong</h3>
+      <p>Pong Game: A simple yet addictive Pong game built with HTML, CSS, and JavaScript. Play against the computer.</p>
+      <a href="https://kdavis00.github.io/pong/" target="_blank">View Project</a>
+    </div>
+  </div>
+</section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <p>
+      Here are a few of my skills I've learned through school and self-teaching:
+    </p>
+    <div class="badges">
+      <span class="badge"><i class="devicon-javascript-plain"></i> JavaScript</span>
+      <span class="badge"><i class="devicon-html5-plain"></i> HTML</span>
+      <span class="badge"><i class="devicon-css3-plain"></i> CSS</span>
+      <span class="badge"><i class="devicon-python-plain"></i> Python</span>
+      <span class="badge"><i class="devicon-react-plain"></i> React</span>
+      <span class="badge"><i class="devicon-vite-plain"></i> Vite</span>
+    </div>
+  </section>
+
+  <!-- Spotify Section -->
+  <section class="spotify-section" id="spotify">
+    <h2>My Music</h2>
+    <div class="spotify-container">
+      <div class="now-playing">
+        <h3>Now Playing</h3>
+        <div id="current-track">
+          <div class="track-info">
+            <img id="track-artwork" src="" alt="Album artwork" class="hidden">
+            <div class="track-details">
+              <p id="track-name">Not playing</p>
+              <p id="track-artist"></p>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div id="progress"></div>
+          </div>
+        </div>
+      </div>
+      <div class="recently-played">
+        <h3>Recently Played</h3>
+        <div id="recent-tracks">
+          <!-- Recent tracks will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Device Detection Button -->
+  <button id="deviceInfoButton" class="device-btn" onclick="detectDevice()">📱 Check Device</button>
+  <div id="device-info"></div>
+
+  <!-- JS -->
+  <script src="spotify.js"></script>
+  <script src="device.js"></script>
+</body>
+</html>

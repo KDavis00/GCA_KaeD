@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: spotify-portfolio-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SPOTIFY_CLIENT_ID
+        sync: false
+      - key: SPOTIFY_CLIENT_SECRET
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
