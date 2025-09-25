@@ -1,103 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Kae Davis</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Devicon CSS -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kae Davis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header / Hero -->
-  <header>
+
+     <header>
     <div class="coin-container">
       <div class="coin">
         <img src="Kae_img.jpeg" alt="Kae Davis" class="front" />
         <img src="K1_cool.png" alt="Kae Davis alternate" class="back" />
       </div>
     </div>
-    <h1>Kae Davis</h1>
-    <p>Aspiring web developer</p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/kae-davis-551915139/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="devicon-linkedin-plain-wordmark"></i>
+        <h1>Kae Davis</h1>
+        <p>Aspiring web developer</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/" target="_blank"><i class="devicon-linkedin-plain-wordmark"></i></a>
+            <a href="https://github.com/your-profile" target="_blank"><i class="devicon-github-original"></i></a>
+        </div>
+    </header>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
+ <!-- Activities Bar -->
+<div class="activities-wrapper" id="activities-bar">
+  <!-- Collapsible content -->
+  <div class="activities-content">
+    <!-- LEFT: Spotify -->
+    <div class="activity-left">
+      <p>Listening to:</p>
+      <div id="now-playing"></div>
+    </div>
+
+    <!-- RIGHT: Twitch -->
+    <div class="activity-right">
+      <a id="twitch-button" href="https://www.twitch.tv/illuminatedk1" target="_blank">
+        ⚫ Offline on Twitch
       </a>
-      <a href="https://github.com/KDavis00" target="_blank" rel="noopener noreferrer">
-        <i class="devicon-github-original-wordmark"></i>
-      </a>
     </div>
-  </header>
+  </div>
 
-  <!-- Sticky Navbar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-    </ul>
-  </nav>
+  <!-- Toggle button at bottom center -->
+  <div class="activities-toggle">
+    <button id="toggle-activities">🞁</button>
+  </div>
+</div>
 
-  <!-- Mission Section -->
-  <section class="section" id="about">
-    <div class="gif-wrapper">
-      <img src="cat-breakdance.gif" alt="Cat Breakdancing" class="gif-small" />
-    </div>
-    <div class="text">
-      <h2>About Me</h2>
-      <p>
-        Right now, I'm experimenting with HTML, CSS, JavaScript, and React and exploring new tools and figuring out how to bring creative ideas to life on the web.
-       
-        On the side, I'm also a part-time Twitch streamer, where I share creative projects, build computers, have chill dev sessions, and the occasional game stream.
-      </p>
-    </div>
-  </section>
+<script>
+  // Toggle the activities bar
+  const activitiesWrapper = document.getElementById('activities-bar');
+  const toggleBtn = document.getElementById('toggle-activities');
 
-  <!-- Projects Section -->
-  <section class="section projects" id="projects">
-    <h2>Projects</h2>
-    <div class="project-cards">
-      <div class="project-card">
-        <h3>Snake Game</h3>
-        <p>Combining my love for retro games with web development, I recreated the classic Snake game using HTML, CSS, and JavaScript.</p>
-        <a href="https://kdavis00.github.io/Snake/" target="_blank">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Magic 8 Ball</h3>
-        <p>I've recreated the classic Magic 8 Ball using HTML, CSS, and JavaScript. Ask it any question and let fate decide your destiny!</p>
-        <a href="https://kdavis00.github.io/Magic-8Ball/" target="_blank">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Pong</h3>
-        <p>Pong Game: A simple yet addictive Pong game built with HTML, CSS, and JavaScript. Play against the computer.</p>
-        <a href="https://kdavis00.github.io/pong/" target="_blank">View Project</a>
-      </div>
-    </div>
-  </section>
+  toggleBtn.addEventListener('click', () => {
+    activitiesWrapper.classList.toggle('collapsed');
 
-  <!-- Skills Section -->
-  <section class="skills" id="skills">
-    <h2>Skills</h2>
-    <p>
-      Here are a few of my skills I've learned through school and self-teaching:
-    </p>
-    <div class="badges">
-      <span class="badge"><i class="devicon-javascript-plain"></i> JavaScript</span>
-      <span class="badge"><i class="devicon-html5-plain"></i> HTML</span>
-      <span class="badge"><i class="devicon-css3-plain"></i> CSS</span>
-      <span class="badge"><i class="devicon-python-plain"></i> Python</span>
-      <span class="badge"><i class="devicon-react-plain"></i> React</span>
-      <span class="badge"><i class="devicon-vite-plain"></i> Vite</span>
-    </div>
-  </section>
+    // Change arrow direction
+    toggleBtn.textContent = activitiesWrapper.classList.contains('collapsed') ? '🞃' : '🞁';
+  });
+</script>
 
-  <!-- Mobile Device Detection Button -->
-  <button id="deviceInfoButton" class="device-btn" onclick="detectDevice()">📱 Check Device</button>
-  <div id="device-info"></div>
 
-  <!-- JS -->
-  <script src="device.js"></script>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="text">
+            <h2>About Me</h2>
+            <p>I am a passionate and aspiring web developer, currently honing my skills in front-end technologies. I love creating engaging user interfaces and have been experimenting with HTML, CSS, JavaScript, and React.</p>
+            <div class="gif-wrapper">
+                <img id="gif-cat" src="cat-breakdance.gif" alt="Cat breakdancing gif" class="gif-small">
+            </div>
+            <p>I'm a part-time Twitch streamer where I share my creative projects and coding sessions with a small community. Come say hello!</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class ="section">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <h3>Snake Game</h3>
+                <p>A classic Snake game built with pure JavaScript, HTML, and CSS. The goal is to eat the food and grow longer without running into the walls or your own tail.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Magic 8 Ball</h3>
+                <p>An interactive digital Magic 8 Ball that answers your yes/no questions with a simple click. It was a fun project to practice JavaScript logic and DOM manipulation.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Pong</h3>
+                <p>A two-player Pong game, recreating the nostalgic arcade experience directly in the browser. It was a great way to learn about canvas and animation.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <p>A few of my most-used technologies and skills:</p>
+        <div class="badges">
+            <span class="badge">JavaScript</span>
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">Python</span>
+            <span class="badge">React</span>
+            <span class="badge">Vite</span>
+        </div>
+    </section>
+
+    <!-- Mobile Device Button and Info Box -->
+    <button class="device-btn">📱 Check Device</button>
+    <div id="device-info"></div>
+
+    <script>
+        // Check for device type and update the info box
+        function checkDevice() {
+            const infoBox = document.getElementById("device-info");
+            let info = "";
+            
+            if (navigator.userAgentData && navigator.userAgentData.mobile) {
+                info += "Device: Mobile\n";
+            } else {
+                info += "Device: Desktop\n";
+            }
+
+            info += "Screen Width: " + window.innerWidth + "px\n";
+            info += "Screen Height: " + window.innerHeight + "px";
+            infoBox.innerText = info;
+        }
+
+        // Show/hide device info on button click
+        const deviceBtn = document.querySelector(".device-btn");
+        const infoBox = document.getElementById("device-info");
+        deviceBtn.addEventListener("click", () => {
+            checkDevice();
+            infoBox.style.display = infoBox.style.display === "block" ? "none" : "block";
+        });
+
+        // Load Now Playing data from Lanyard API
+        async function loadNowPlaying() {
+            const res = await fetch("https://api.lanyard.rest/v1/users/190386686956535810");
+            const data = await res.json();
+            const container = document.getElementById("now-playing");
+
+            if (data.data && data.data.spotify) {
+                const { song, artist, album_art_url, track_id } = data.data.spotify;
+                container.innerHTML = `
+                    <a href="https://open.spotify.com/track/${track_id}" target="_blank" class="song-link">
+                        <img src="${album_art_url}" alt="${song} album art" class="song-artwork"/>
+                        <div class="song-info">
+                            <p class="song-title">${song}</p>
+                            <p class="song-artist">${artist}</p>
+                        </div>
+                    </a>
+                `;
+            } else {
+                container.innerHTML = "<p class='not-playing'>🎧 Not listening to anything right now.</p>";
+            }
+        }
+
+        loadNowPlaying();
+        setInterval(loadNowPlaying, 10000); // refresh every 10s
+    </script>
+
 </body>
 </html>

@@ -1,23 +1,23 @@
 /* Basic reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f4f4f4;
 }
 
 /* Container for all content */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* General Styles */
@@ -30,7 +30,12 @@ body {
 
 /* Spotify Section Styles */
 .spotify-section {
-  background-color: rgba(29, 185, 84, 0.1);  /* Spotify green with transparency */
+  background-color: rgba(
+    29,
+    185,
+    84,
+    0.1
+  ); /* Spotify green with transparency */
   padding: 2rem;
   margin: 2rem auto;
   border-radius: 10px;
@@ -89,7 +94,7 @@ body {
 
 #progress {
   height: 100%;
-  background: #1DB954;
+  background: #1db954;
   border-radius: 2px;
   width: 0;
 }
@@ -128,7 +133,6 @@ body {
 .hidden {
   display: none;
 }
-
 
 a {
   text-decoration: none;
@@ -183,7 +187,7 @@ header p {
   height: 100%;
   border-radius: 50%;
   border: 4px solid #f4ede1;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
   left: 0;
@@ -218,7 +222,7 @@ header p {
   font-size: 4rem;
   color: white;
   transition: transform 0.2s ease, color 0.2s ease;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 9);  /* Adding a subtle shadow effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 9); /* Adding a subtle shadow effect */
 }
 
 .social-links i:hover {
@@ -227,16 +231,16 @@ header p {
 }
 
 .social-links .devicon-linkedin-plain-wordmark {
-  font-size: 5rem !important;  /* Making the LinkedIn icon bigger with !important to override any other styles */
+  font-size: 5rem !important; /* Making the LinkedIn icon bigger with !important to override any other styles */
   position: relative;
-  top: 24px;                 /* reset the push-up */
+  top: 24px; /* reset the push-up */
 }
 .navbar {
   position: sticky;
   top: 0;
   width: 100%;
   background-color: rgba(37, 82, 3, 0.95);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   z-index: 999;
 }
 
@@ -259,7 +263,62 @@ header p {
 .navbar a:hover {
   color: #3a7a02;
 }
+/* Spotify Now Playing Section */
+#now-playing {
+  /* Container styles */
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+/* Style for the Spotify link container */
+#now-playing a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+#now-playing a:hover {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+/* Album artwork styles */
+#now-playing img {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Text content styles */
+#now-playing div {
+  flex-grow: 1;
+}
+
+#now-playing p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+#now-playing strong {
+  font-size: 1.1rem;
+  color: #1db954; /* Spotify green color */
+}
+
+/* Not playing state */
+#now-playing:not(:has(a)) {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+}
 /* Sections */
 .section {
   display: flex;
@@ -285,8 +344,8 @@ header p {
 /* about Section Gif */
 #about .text {
   display: flex;
-  flex-direction: column;  /* stack elements vertically */
-  align-items: center;     /* center heading, gif, and paragraph */
+  flex-direction: column; /* stack elements vertically */
+  align-items: center; /* center heading, gif, and paragraph */
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
@@ -295,7 +354,7 @@ header p {
   display: flex;
   justify-content: center; /* horizontally center GIF */
   width: 100%;
-  margin: 20px 0;          /* space around the GIF */
+  margin: 20px 0; /* space around the GIF */
 }
 
 #about .gif-small {
@@ -332,13 +391,13 @@ header p {
   border-radius: 10px;
   padding: 20px;
   max-width: 250px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 .project-card h3 {
@@ -388,13 +447,14 @@ header p {
   border-radius: 6px;
   font-size: 0.95em;
   display: inline-block;
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .badge:hover {
   transform: scale(1.1);
   background-color: #3a7a02;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
@@ -419,148 +479,72 @@ header p {
   border-radius: 8px;
   font-size: 0.95rem;
   white-space: pre-line;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   max-width: 200px;
 }
 
-/* Spotify Section */
-.spotify-section {
-  background-color: #e3d2b5;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.spotify-container {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.now-playing, .recently-played {
-  background-color: #255203;
-  border-radius: 12px;
-  padding: 20px;
-  color: #f4ede1;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.track-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-#track-artwork {
-  width: 80px;
-  height: 80px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-#track-artwork.hidden {
-  display: none;
-}
-
-.track-details {
-  text-align: left;
-}
-
-#track-name {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 0;
-}
-
-#track-artist {
-  font-size: 1em;
-  opacity: 0.8;
-  margin: 5px 0 0;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 4px;
-  background-color: rgba(244, 237, 225, 0.2);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-#progress {
-  height: 100%;
-  background-color: #f4ede1;
-  transition: width 0.5s ease;
-}
-
-.recent-track {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(244, 237, 225, 0.1);
-}
-
-.recent-track:last-child {
-  border-bottom: none;
-}
-
-.recent-track-artwork {
-  width: 50px;
-  height: 50px;
-  border-radius: 6px;
-  object-fit: cover;
-}
-
-.recent-track-info {
-  text-align: left;
-  flex-grow: 1;
-}
-
-.recent-track-info .track-name {
-  font-size: 1em;
-  margin: 0;
-}
-
-.recent-track-info .track-artist {
-  font-size: 0.9em;
-  opacity: 0.8;
-  margin: 2px 0 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .device-btn {
-    display: block;
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-    background-color: #2a5e01;
-    color: #f4ede1;
-    border: none;
-    padding: 12px 20px;
+/* Now Playing Section */
+.now-playing-section {
+    width: 300px;
+    height: 90px;
+    margin: 1rem;
+    padding: 8px 12px;    /* Increased horizontal padding */
+    background-color: white;
     border-radius: 8px;
-    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Add position relative for absolute positioning of heading */
+    position: relative;
+}
+
+/* Move heading higher */
+.now-playing-section h2 {
+    font-size: 0.8rem;
+    color: #666;
+    /* Position the heading absolutely */
+    position: absolute;
+    top: -15px;
+    left: 12px;
+    /* Add background to make text readable */
+    background-color: white;
+    padding: 0 4px;
+    /* Remove bottom margin since we're using absolute positioning */
+    margin: 0;
+}
+
+/* Song container */
+#now-playing {
+    /* Adjust height to fill container */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Song title and artist text */
+#now-playing p {
+    margin: 0;
+    /* Allow text to wrap on small screens */
+    white-space: normal;
+    /* Limit to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.2;
+    font-size: 0.8rem;
+}
+
+/* Make song title bold and slightly bigger */
+#now-playing p:first-child {
     font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    z-index: 1000;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-  }
+    font-size: 0.85rem;
+}
 
-  .section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .section .text {
-    margin: 20px 0;
-  }
-
-  .project-cards {
-    flex-direction: column;
-    gap: 20px;
-  }
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .now-playing-section {
+        margin: 1.5rem auto;    /* Increased top margin for heading space */
+        width: 90%;
+        max-width: 300px;
+    }
 }
