@@ -1,141 +1,18 @@
-/* Basic reset */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Body styles */
+/* General Body and Font Styles */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  padding: 20px;
-  background-color: #f4f4f4;
-}
-
-/* Container for all content */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* General Styles */
-body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #255203;
-  color: #333;
-}
-
-/* Spotify Section Styles */
-.spotify-section {
-  background-color: rgba(
-    29,
-    185,
-    84,
-    0.1
-  ); /* Spotify green with transparency */
-  padding: 2rem;
-  margin: 2rem auto;
-  border-radius: 10px;
-  color: #f4ede1;
-  max-width: 800px;
-}
-
-.spotify-container {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  border-radius: 8px;
-}
-
-.now-playing {
-  margin-bottom: 2rem;
-}
-
-.track-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  margin: 1rem 0;
-}
-
-#track-artwork {
-  width: 60px;
-  height: 60px;
-  border-radius: 4px;
-}
-
-.track-details {
-  flex-grow: 1;
-}
-
-#track-name {
-  font-weight: bold;
-  margin: 0;
-  color: #f4ede1;
-}
-
-#track-artist {
-  margin: 5px 0 0;
-  opacity: 0.8;
-  color: #f4ede1;
-}
-
-.progress-bar {
-  height: 4px;
-  background: rgba(255, 255, 255, 0.2);
-  margin-top: 1rem;
-  border-radius: 2px;
-}
-
-#progress {
-  height: 100%;
-  background: #1db954;
-  border-radius: 2px;
-  width: 0;
-}
-
-.recently-played {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  border-radius: 8px;
-}
-
-#recent-tracks {
-  display: grid;
-  gap: 1rem;
-}
-
-.recent-track {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transition: transform 0.2s;
-}
-
-.recent-track:hover {
-  transform: scale(1.02);
-}
-
-.recent-track img {
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-}
-
-.hidden {
-  display: none;
-}
-
-a {
-  text-decoration: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #255203;
+    color: #333;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -187,7 +64,7 @@ header p {
   height: 100%;
   border-radius: 50%;
   border: 4px solid #f4ede1;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   position: absolute;
   top: 0;
   left: 0;
@@ -202,349 +79,380 @@ header p {
   transform: rotateY(180deg);
 }
 
+
 /* Social Links */
 .social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
 }
 
 .social-links i {
-  font-size: 4rem;
-  color: white;
-  transition: transform 0.2s ease, color 0.2s ease;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 9); /* Adding a subtle shadow effect */
+    font-size: 3rem;
+    color: white;
+    transition: transform 0.2s ease, color 0.2s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .social-links i:hover {
-  transform: scale(1.2);
-  color: #ebe485;
+    transform: scale(1.2);
+    color: #ebe485;
 }
 
 .social-links .devicon-linkedin-plain-wordmark {
-  font-size: 5rem !important; /* Making the LinkedIn icon bigger with !important to override any other styles */
-  position: relative;
-  top: 24px; /* reset the push-up */
+    font-size: 5rem !important;
+    position: relative;
+    top: 10px;
 }
+
+/* Sticky Navbar */
 .navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: rgba(37, 82, 3, 0.95);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  z-index: 999;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(37, 82, 3, 0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
 }
 
 .navbar ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 10px 0;
-  gap: 40px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .navbar a {
-  color: #f4ede1;
-  font-weight: bold;
-  font-size: 1.1em;
-  transition: color 0.2s ease;
+    color: #f4ede1;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s ease;
 }
 
 .navbar a:hover {
-  color: #3a7a02;
-}
-/* Spotify Now Playing Section */
-#now-playing {
-  /* Container styles */
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #ebe485;
 }
 
-/* Style for the Spotify link container */
+/* Main Content Layout */
+.main-content-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-sections {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Unified Activities bar (collapsible) */
+.activities-wrapper {
+    background-color: rgba(37, 82, 3, 0.95);
+    color: #f4ede1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 0;
+    padding: 10px 20px;
+}
+
+/* Collapsible toggle */
+.activities-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#toggle-activities {
+    background-color: #3a7a02;
+    color: #f4ede1;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#toggle-activities:hover {
+    background-color: #2a5e01;
+    transform: translateY(-2px);
+}
+
+/* Collapsed state */
+.activities-wrapper.collapsed .activities-content {
+    display: none;
+}
+
+/* Activities Content */
+.activities-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-top: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Left side: Spotify */
+.activity-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activity-left h2 {
+    margin: 0 0 8px;
+}
+
+/* Spotify song info */
 #now-playing a {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  text-decoration: none;
-  color: #333;
-  transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #f4ede1;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#now-playing a:hover {
-  background-color: #f5f5f5;
-  border-radius: 8px;
+.song-artwork {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    max-width: 80%;
+    height: auto;
 }
 
-/* Album artwork styles */
-#now-playing img {
-  width: 64px;
-  height: 64px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.song-title {
+    font-size: 0.9em;
+    font-weight: bold;
 }
 
-/* Text content styles */
-#now-playing div {
-  flex-grow: 1;
+.song-artist {
+    font-size: 0.8em;
+    opacity: 0.8;
 }
 
-#now-playing p {
-  margin: 0;
-  line-height: 1.4;
+/* Right side: Twitch button */
+.activity-right a {
+    background-color: #6441a5;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-#now-playing strong {
-  font-size: 1.1rem;
-  color: #1db954; /* Spotify green color */
+.activity-right a:hover {
+    background-color: #7d5bbe;
+    transform: translateY(-2px);
 }
 
-/* Not playing state */
-#now-playing:not(:has(a)) {
-  text-align: center;
-  color: #666;
-  padding: 2rem;
+.activity-right a.live {
+    background-color: #e91916;
 }
+
 /* Sections */
 .section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
-  background-color: #e3d2b5;
-}
-
-.section .text {
-  max-width: 600px;
-  margin: 20px;
+    padding: 60px 20px;
+    background-color: #e3d2b5;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
 }
 
 .section h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-  color: black;
-  text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
 }
 
-/* about Section Gif */
+/* About Section Gif */
 #about .text {
-  display: flex;
-  flex-direction: column; /* stack elements vertically */
-  align-items: center; /* center heading, gif, and paragraph */
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
+
 .gif-wrapper {
-  display: flex;
-  justify-content: center; /* horizontally center GIF */
-  width: 100%;
-  margin: 20px 0; /* space around the GIF */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
 }
 
 #about .gif-small {
-  display: block;
-  width: 150px;
-  height: auto;
+    display: block;
+    width: 150px;
+    height: auto;
+    max-width: 80%;
 }
 
 /* Projects Section */
 #projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #e3d2b5;
-}
-
-#projects h2 {
-  font-size: 2em;
-  margin-bottom: 30px;
-  color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #e3d2b5;
 }
 
 .project-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .project-card {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 250px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 250px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-}
-
-.project-card h3 {
-  margin-top: 0;
-  font-size: 1.3em;
-}
-
-.project-card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #2a5e01;
-  font-weight: bold;
-}
-
-.project-card a:hover {
-  color: #3a7a02;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
 /* Skills Section */
 .skills {
-  background-color: #255203;
-  color: #f4ede1;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.skills h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.skills p {
-  margin-bottom: 30px;
-  font-weight: 300;
+    background-color: #255203;
+    color: #f4ede1;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
 }
 
 .badges {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .badge {
-  background-color: #2a5e01;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-size: 0.95em;
-  display: inline-block;
-  transition: transform 0.2s ease, background-color 0.2s ease,
-    box-shadow 0.2s ease;
+    background-color: #2a5e01;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    display: inline-block;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .badge:hover {
-  transform: scale(1.1);
-  background-color: #3a7a02;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
+    transform: scale(1.1);
+    background-color: #3a7a02;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
 }
 
 /* Mobile Device Button */
 .device-btn {
-  display: none;
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2a5e01;
+    color: #f4ede1;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .device-btn:hover {
-  transform: translateY(-2px);
-  background-color: #3a7a02;
+    transform: translateX(-50%) translateY(-2px);
+    background-color: #3a7a02;
 }
 
 #device-info {
-  display: none;
-  position: fixed;
-  bottom: 120px;
-  right: 20px;
-  background-color: #2a5e01;
-  color: #f4ede1;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  white-space: pre-line;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  max-width: 200px;
-}
-
-/* Now Playing Section */
-.now-playing-section {
-    width: 300px;
-    height: 90px;
-    margin: 1rem;
-    padding: 8px 12px;    /* Increased horizontal padding */
-    background-color: white;
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2a5e01;
+    color: #f4ede1;
+    padding: 10px 16px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* Add position relative for absolute positioning of heading */
-    position: relative;
+    font-size: 0.95rem;
+    white-space: pre-line;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    max-width: 200px;
+    text-align: center;
 }
 
-/* Move heading higher */
-.now-playing-section h2 {
-    font-size: 0.8rem;
-    color: #666;
-    /* Position the heading absolutely */
-    position: absolute;
-    top: -15px;
-    left: 12px;
-    /* Add background to make text readable */
-    background-color: white;
-    padding: 0 4px;
-    /* Remove bottom margin since we're using absolute positioning */
-    margin: 0;
+/* Responsive: Multi-breakpoints */
+@media (max-width: 1024px) {
+    .navbar ul { flex-wrap: wrap; gap: 15px; }
+    header h1 { font-size: 2.2em; }
 }
 
-/* Song container */
-#now-playing {
-    /* Adjust height to fill container */
-    height: 100%;
-    display: flex;
-    align-items: center;
+@media (max-width: 768px) {
+    header img, .coin-container { width: 120px; height: 120px; }
+    .activities-content { flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+    .activity-right { margin-top: 10px; }
+    .project-card { max-width: 90%; }
+    .song-artwork { width: 64px; height: 64px; }
 }
 
-/* Song title and artist text */
-#now-playing p {
-    margin: 0;
-    /* Allow text to wrap on small screens */
-    white-space: normal;
-    /* Limit to 2 lines */
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    line-height: 1.2;
-    font-size: 0.8rem;
+@media (max-width: 480px) {
+    header img, .coin-container { width: 100px; height: 100px; }
+    header h1 { font-size: 1.8rem; }
+    header p { font-size: 0.9rem; }
+    .project-card { max-width: 95%; }
+    .badge { width: 100%; text-align: center; }
+    #toggle-activities { width: 90%; }
 }
 
-/* Make song title bold and slightly bigger */
-#now-playing p:first-child {
-    font-weight: bold;
-    font-size: 0.85rem;
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-    .now-playing-section {
-        margin: 1.5rem auto;    /* Increased top margin for heading space */
-        width: 90%;
-        max-width: 300px;
-    }
+@media (max-width: 360px) {
+    header h1 { font-size: 1.5rem; }
+    header p { font-size: 0.8rem; }
+    .social-links i { font-size: 1.5rem; }
+    .device-btn { width: 95%; padding: 10px; font-size: 0.8rem; }
 }
